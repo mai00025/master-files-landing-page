@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f7f7ff;
+    font-family: 'Montserrat', sans-serif;
+}
+/* section logo */
+section.logo{
+    position: relative;
+}
+section.logo .container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+section.logo .container .logo{
+    position: relative;
+    max-width: 150px;
+    height: 150px;
+}
+section.logo .container .logo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* section body */
+section.body{
+    position: relative;
+    padding: 100px 0;
+}
+section.body .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url('./images/bg-image/scooter.svg');
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+}
+section.body .container .text h3{
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+section.body .container .text p{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+section.body .container .form {
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px;
+}
+section.body .container .form h3{
+    font-size: 2.5em;
+    font-weight: bolder;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+section.body .container .form p{
+    font-size: 1.3em;
+    font-weight: 400;
+    width: 100%;
+
+}
+section.body .container .form{
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+                -5px -5px 15px rgba(0,0,0,0.1);
+}
+section.body .container .form form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.body .container .form form input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    border:none;
+    background-color: #f7f7ff;
+    font-size: 16px;
+    border-radius: 10px;
+}
+section.body .container .form .check{
+    display: flex;
+    align-items: center;
+}
+section.body .container .form form input[type="checkbox"]{
+    width: unset;
+}
+section.body .container .form form input[type="submit"]{
+    background-color: #57eeab;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 100%;
+    cursor: pointer;
+}
+section.body .container .form form input[type="submit"]:hover{
+    opacity: 0.8;
+}
+section.body .container .form p.text{
+    font-size: 1em;
+}
+section.body .container .form p.text a{
+    text-decoration: none;
+    color: #ff8480;
+}
+section.body .container .form p.text a:hover{
+    text-decoration: underline;
+}
+/* footer */
+footer{
+    background-color: #fffd8c;
+    padding: 50px 0;
+}
+footer .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .container .form{
+    flex: 1;
+}
+footer .container .form h3{
+    font-size: 16px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+footer .container .form p{
+    padding-bottom: 10px;
+}
+
+footer .container .form form input{
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+footer .container .form form input:nth-child(1){ 
+    width: 20%;
+}
+footer .container .form form input:nth-child(2){
+    width: 30%;
+}
+footer .container .form form input:nth-child(3){
+    flex-basis: 40%;
+    cursor: pointer;
+    background-color: #ff8480;
+    font-weight: 700;
+    color:#fff;
+}
+footer .container .social{
+    flex: 1;
+}
+footer .container .social ul{
+    display: flex;
+    justify-content: flex-end;
+}
+footer .container .social ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+@media only screen and (max-width:1366px){
+    section.body .container{
+      padding: 0 20px;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+    footer .container{
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width:991px){
+    section.body .container{
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+        grid-gap: 150px 0;
+        padding: 0 20px;
+        background-position: center 40%;
+    }
+    section.body .container .form{
+        justify-content: unset;
+        padding: 15px;
+
+    }
+    section.logo .container{
+        padding: 0 20px;
+    }
+
+    section.body .container .text h3{
+        font-size: 6rem;
+    }
+    section.body .container .text p{
+        font-size: 1.8rem;
+    }
+
+    section.body .container .form h3{
+        font-size: 2rem;
+    }
+    section.body .container .form p{
+        font-size: 1rem;
+    }
+    footer .container{
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    footer .container .social ul{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    footer .container .form form input{
+        margin: 5px 0;
+    }
+    footer .container .form form input:nth-child(2){
+        width: 30%;
+    }
+    footer .container .form form input:nth-child(3){
+        width: 30%;
+    }
+}
+@media only screen and (max-width:500px){
+    section.body .container{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        padding: 0 20px;
+        background-position: center 40%;
+        grid-gap: 100px 0;
+    }
+    section.logo .container{
+        padding: 0 20px;
+    }
+    section.body .container .text p{
+        font-size: 1.4em;
+    }
+    section.body .container .form{
+        justify-content: unset;
+        padding: 15px;
+    }
+    section.body .container .text h3{
+        font-size: 3.5rem;
+    }
+    section.body .container .form h3{
+        font-size: 2rem;
+    }
+    section.body .container .form p{
+        font-size: 1rem;
+    }
+    section.body .container .form form input[type="submit"]{
+        font-size: 1.5rem;
+    }
+    footer .container{
+        padding: 0 20px;
+    }
+    footer .container .social ul{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    footer .container .form form input{
+        margin: 5px 0;
+    }
+    footer .container .form form input:nth-child(2){
+        width: 60%;
+    }
+    footer .container .form form input:nth-child(3){
+        width: 95%;
+    }
+
+}
